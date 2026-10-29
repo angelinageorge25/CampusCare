@@ -1,0 +1,8 @@
+{% extends "base.html" %}{% block title %}Sign in{% endblock %}
+{% block content %}<div class="row justify-content-center"><div class="col-md-6 col-lg-5"><div class="panel p-4 p-md-5">
+<span class="eyebrow">Welcome back</span><h2 class="fw-bold mt-2">Sign in to CampusCare</h2><p class="text-secondary">Use a demo account to explore the project.</p>
+<form method="post" class="mt-4"><div class="mb-3"><label class="form-label">Username</label><input class="form-control form-control-lg" name="username" required autocomplete="username"></div>
+<div class="mb-3"><label class="form-label">Password</label><input type="password" class="form-control form-control-lg" name="password" required autocomplete="current-password"></div>
+<button class="btn btn-primary btn-lg w-100 mt-2">Sign in →</button></form>
+<div class="demo-box mt-4"><div class="fw-semibold mb-2">Demo accounts</div><div class="small"><b>Student:</b> student / student123</div><div class="small"><b>Staff:</b> staff / staff123</div></div>
+</div></div></div>{% endblock %}

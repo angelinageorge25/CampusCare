@@ -1,0 +1,9 @@
+{% extends "base.html" %}{% block title %}Report an issue{% endblock %}
+{% block content %}<div class="row justify-content-center"><div class="col-lg-8"><a href="{{ url_for('dashboard') }}" class="small text-decoration-none">← Back to dashboard</a><div class="mt-3 mb-4"><span class="eyebrow">NEW CAMPUS TICKET</span><h1 class="fw-bold mt-2">What needs attention?</h1><p class="text-secondary">Share enough detail to help staff act. A photo is optional.</p></div>
+<div class="panel p-4 p-md-5"><form method="post" enctype="multipart/form-data">
+<div class="mb-3"><label class="form-label fw-semibold">Issue title</label><input name="title" class="form-control form-control-lg" placeholder="e.g. Water tap leaking near Block B" minlength="4" maxlength="150" required></div>
+<div class="mb-3"><label class="form-label fw-semibold">Describe the issue</label><textarea name="description" class="form-control" rows="5" minlength="8" maxlength="3000" placeholder="Where is it? What happened? When did you notice it?" required></textarea></div>
+<div class="mb-3"><label class="form-label fw-semibold">Category</label><select name="category" class="form-select"><option value="AI">Suggest category automatically (demo AI)</option>{% for c in categories %}<option value="{{ c }}">{{ c }}</option>{% endfor %}</select><div class="form-text">Automatic classification uses transparent keyword rules for this demo. Staff can review.</div></div>
+<div class="mb-4"><label class="form-label fw-semibold">Attach a photo <span class="text-secondary fw-normal">(optional · max 4 MB)</span></label><input type="file" name="photo" class="form-control" accept=".png,.jpg,.jpeg,.webp"><div class="form-text">PNG, JPG, JPEG, or WEBP.</div></div>
+<div class="d-flex gap-2 flex-wrap"><button class="btn btn-primary btn-lg">Submit complaint →</button><a href="{{ url_for('dashboard') }}" class="btn btn-light btn-lg">Cancel</a></div>
+</form></div></div></div>{% endblock %}

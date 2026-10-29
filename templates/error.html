@@ -1,0 +1,2 @@
+{% extends "base.html" %}{% block title %}{{ code }}{% endblock %}
+{% block content %}<div class="text-center py-5"><div class="display-1 fw-bold text-primary">{{ code }}</div><h2 class="fw-bold">{{ message }}</h2><a class="btn btn-primary mt-3" href="{{ url_for('dashboard') if session.get('user_id') else url_for('home') }}">Go back</a></div>{% endblock %}

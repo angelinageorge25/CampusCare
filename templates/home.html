@@ -1,0 +1,24 @@
+{% extends "base.html" %}{% block title %}Home{% endblock %}
+{% block content %}
+<section class="hero p-4 p-md-5 mb-5">
+ <div class="row align-items-center g-4"><div class="col-lg-7">
+  <span class="eyebrow">A better campus starts with a report</span>
+  <h1 class="display-4 fw-bold mt-3">Small issues.<br><span class="text-accent">Clear progress.</span></h1>
+  <p class="lead text-secondary mt-3">One simple place to report campus problems, follow updates, and help staff spot recurring issues.</p>
+  <div class="d-flex flex-wrap gap-2 mt-4"><a class="btn btn-primary btn-lg" href="{{ url_for('login') }}">Open the tracker <span aria-hidden="true">→</span></a><a class="btn btn-outline-secondary btn-lg" href="#how">How it works</a></div>
+  <div class="d-flex flex-wrap gap-4 mt-4 small text-secondary"><span>✓ Organized tickets</span><span>✓ Transparent status</span><span>✓ Staff-reviewed priority</span></div>
+ </div><div class="col-lg-5"><div class="preview-card">
+   <div class="d-flex justify-content-between align-items-center"><span class="fw-semibold">Recent ticket</span><span class="status-pill status-progress">In Progress</span></div>
+   <h5 class="mt-4">Water tap leak · Block B</h5><p class="text-secondary small">Reported by a student · Sample preview</p>
+   <div class="progress mt-4" role="progressbar" aria-label="Ticket progress"><div class="progress-bar" style="width:58%"></div></div>
+   <div class="d-flex justify-content-between small text-secondary mt-2"><span>Submitted</span><span>In progress</span><span>Resolved</span></div>
+   <hr class="my-4"><div class="d-flex gap-3 align-items-center"><div class="icon-bubble">↗</div><div><div class="fw-semibold">Every update in one place</div><div class="small text-secondary">No more lost chat messages.</div></div></div>
+ </div></div></div>
+</section>
+<section id="how" class="mb-5"><div class="text-center mb-4"><span class="eyebrow">Simple by design</span><h2 class="fw-bold mt-2">From issue to action</h2></div>
+<div class="row g-3"><div class="col-md-4"><div class="feature-card"><div class="feature-num">01</div><h5>Report it</h5><p class="text-secondary mb-0">Create a categorized ticket and optionally add a photo.</p></div></div>
+<div class="col-md-4"><div class="feature-card"><div class="feature-num">02</div><h5>Track it</h5><p class="text-secondary mb-0">See status, staff notes, and the latest update.</p></div></div>
+<div class="col-md-4"><div class="feature-card"><div class="feature-num">03</div><h5>Improve together</h5><p class="text-secondary mb-0">Staff review priorities and identify repeat issues.</p></div></div></div>
+</section>
+<div class="cta-band d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3"><div><h4 class="fw-bold mb-1">Ready to make your campus better?</h4><p class="text-secondary mb-0">Try the student or staff demo account.</p></div><a href="{{ url_for('login') }}" class="btn btn-primary">Sign in to continue</a></div>
+{% endblock %}
